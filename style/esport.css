@@ -1,0 +1,38 @@
+/* Esport ************************************************************************************************************************************* */
+#divEsport{
+    display:none;
+    width:330px;
+    height:222px;
+}
+
+
+/* Options ************************************************************************************************************************************* */
+
+#game {
+    display: none;
+}
+
+#inGame {
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    height: 40px;
+    width: 150px;
+    background-color: rgb(205, 255, 255);
+    border-style: none;
+    border-radius: 5px;
+    color: black;
+    transition: all 0.1s;
+    margin-bottom: 5px;
+}
+
+#inGame:hover {
+    transform: scale(110%);
+}
+
+/* Affichage ************************************************************************************************************************************* */
+
+
+
+
+

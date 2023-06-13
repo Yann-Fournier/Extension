@@ -1,0 +1,190 @@
+/* Stream ******************************************************************************************************************/
+#divStream {
+    display:none;
+    width:330px;
+    height:222px;
+    margin-top: 10px;
+}
+
+
+/* Options ***************************************************************************************************/
+/* #addStream {
+    display: none;
+    height: 30px;
+}
+
+#buAddStream {
+    height: 30px;
+    width: 30px;
+    padding: 0%;
+    transition: all 0.1s;
+}
+
+#buAddStream:hover {
+    transform: scale(120%);
+}
+
+#inAddStream {
+    height: 40px;
+    width: 150px;
+    margin-left: 20px;
+    margin-right: 10px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: rgba(215, 143, 245, 0.5);
+    border-style: none;
+    border-radius: 5px;
+    transition: all 0.1s;
+}
+
+#inAddStream:hover {
+    transform: scale(110%);
+}
+
+#inAddStream::placeholder{
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+    align-self: center;
+}
+
+
+#inAddStream::selection {
+    border: 10px;
+}
+
+#buRemoveStream {
+    height: 30px;
+    width: 30px;
+    padding: 0%;
+    align-items: normal;
+    transition: all 0.1s;
+}
+
+#buRemoveStream:hover {
+    transform: scale(120%); 
+}
+
+#MenuAddStream{
+    display: none;
+    flex-direction: column;
+    margin: 50px auto;
+    width: 200px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    background-color: rgb(228, 179, 251);
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 1000;
+}
+
+#infoStreamerTrouver {
+    color: black;
+}
+
+#buValStream {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#buVal {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+#imgVal {
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+    transition: all 0.1s; 
+}
+
+#imgVal:hover {
+    transform: scale(120%);
+}
+
+#imgRes {
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    transition: all 0.1s;
+}
+
+#imgRes:hover {
+    transform: scale(120%);
+}
+
+/* Menu validation Streamer */
+/* #infoStreamerTrouver {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#MenuRemStream{
+    display: none;
+    flex-direction: column;
+    margin: 50px auto;
+    width: 200px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    background-color: rgb(228, 179, 251);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 1000;
+}
+
+
+#infoStreamerTrouver {
+    color: black;
+}
+
+#ajoutStream {
+    height: 40px;
+    width: 40px;
+}
+
+#retrait {
+    height: 40px;
+    width: 40px;
+}  */
+
+
+/* Affichage ******************************************************************************************************************/
+
+/* Link to stream */
+.linkStream {
+    display: inline;
+    height: 10px; 
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    font-weight: 400; 
+    margin-right:5px;
+}
+
+.linkStream:link {
+    text-decoration: none;
+    color: black
+}
+
+.linkStream:visited {
+    color: black;
+}
+
+.linkStream:hover {
+    color: rgb(234, 4, 234);
+    transform: scale(110%);
+    cursor: pointer;
+}

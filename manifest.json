@@ -1,0 +1,23 @@
+{
+    "name": "Info",
+    "description": "Truc ou il y a tout ce qui m'interresse",
+    "version": "0.1",
+    "manifest_version": 3,
+
+    "background": {
+        "service_worker": "./js/background.js"
+    },
+    "action":{
+        "default_popup": "./html/popup.html"
+    },
+    "icons": {
+        "16": "./images/icons/info.png",
+        "32": "./images/icons/info.png",
+        "48": "./images/icons/info.png",
+        "128": "./images/icons/info.png"
+    },
+    "permissions":[
+        "alarms",
+        "notifications"
+    ]
+}

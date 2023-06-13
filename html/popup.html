@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- font-family: 'Dongle', sans-serif; -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <title>Extension Info</title>
+        <link rel="stylesheet" href="../style/popup.css">
+        <link rel="stylesheet" href="../style/stream.css">
+        <link rel="stylesheet" href="../style/esport.css">
+        <link rel="stylesheet" href="../style/home.css">
+        <link rel="stylesheet" href="../style/formula1.css">
+        <link rel="stylesheet" href="../style/manga.css">
+        <!-- <link rel="js" href="../js/manga.js"> -->
+    </head>
+
+    <body id="bod">
+
+        <div id="MenuAddFav">
+            <div id="boutonCroix">
+                <button id="buQuiteFav">
+                    <img id="croix" src="../images/icons/croix.png" >
+                </button>
+            </div>
+            <input type="text" id="inImageFav" placeholder="Image">
+            <input type="text" id="inNomFav" placeholder="Nom">
+            <input type="text" id="inUrlFav" placeholder="Url">
+            <button id="buValFav">
+                <img id="validationFav" src="../images/icons/validation.png" >
+            </button>
+        </div>
+
+        <div id="MenuRemFav">
+            <div id="question">
+                Est-tu sûr ?
+            </div>
+            <div id="buRemFavo">
+                <button id="buValRemF">
+                    <img id="imgVal" src="../images/icons/validation.png">
+                </button>
+                <button id="buResRemF">
+                    <img id="imgRes" src="../images/icons/annulation.png">
+                </button>
+            </div>
+        </div>
+
+        <div id="logo">
+            <img id="image" src="../images/icons/maison.png">
+        </div>
+        <div id="info">
+            <div id="bouton">
+                <button id="stream" class="">Stream</button>
+                <button id="esport" class="">Esport</button>
+                <button id="home" class="">Home</button>
+                <button id="formula1" class="">Formula 1</button>
+                <button id="manga" class="">Manga</button>
+            </div>
+            <div id="options" class="options">
+                <!-- <div id="addStream"></div> -->
+
+                <div id="game">
+                    <select name="le_nom" id="inGame" placeholder="Game">
+                        <option value="RL">Rocket League</option>
+                        <option value="VAL">Valorant</option>
+                        <option value="LOL">League of Legend</option>
+                    </select>
+                    <button id="buChoseGame">
+                        <img id="validation" src="../images/icons/validation.png" >
+                    </button>
+                </div>
+
+                <div id="addFavoris">
+                    <button id="buAddFavori">
+                        <img id="ajoutFav" src="../images/icons/ajouter.png">
+                    </button>
+                </div>
+
+                <div id="year">
+                    <button id="races">
+                        Races
+                    </button>
+                    <button id="driverStanding">
+                        Driver Standing
+                    </button>
+                    <button id="constructorStanding">
+                        Constructor Standing
+                    </button>
+                </div>
+                
+                <div id="titre">
+                    <input type="text" id="inTitre" placeholder="Tilte">
+                    <button id="buChoseYear">
+                        <img id="validation" src="../images/icons/validation.png" >
+                    </button>
+                </div>
+            </div>
+            <div id="affichage">
+                <div id="divStream"></div>
+                <div id="divEsport"></div>
+                <div id="divHome"></div>
+                <div id="divFormula1">
+                    <div id="affRaces"></div>
+                    <div id="affDriverStanding"></div>
+                    <div id="affConstructorStanding"></div>
+                </div>
+                <div id="divManga"></div>
+            </div>
+            
+        </div>
+
+        <!-- <script type="module" src="../node_modules/fs.realpath/index.js"></script>
+        <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+        <script type="text/javascript" src="../json/stream.json"></script> -->
+        <script src="../js/popup.js"></script>
+        <script src="../js/stream.js"></script>
+        <script src="../js/esport.js"></script>
+        <script src="../js/home.js"></script>
+        <script src="../js/formula1.js"></script>
+        <script src="../js/manga.js"></script>
+        <script src="../js/test.js"></script>
+    </body>
+</html>

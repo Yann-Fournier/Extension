@@ -1,0 +1,214 @@
+#divFormula1 {
+    display:none;
+    width:330px;
+    height:222px;
+}
+
+/* Formula 1 **************************************************************************************************/
+#year {
+    display: none;
+}
+
+#races {
+    font-family: 'Dongle', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    height: 40px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(255, 86, 86);
+    color: black;
+    transition: all 0.1s;
+    margin-right: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+} 
+
+#races:hover {
+    transform: scale(110%);
+    cursor: pointer;
+}
+
+#driverStanding {
+    font-family: 'Dongle', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    height: 40px;
+    width: 150px;
+    background-color: rgb(255, 86, 86);
+    border-style: none;
+    border-radius: 5px;
+    color: black;
+    transition: all 0.1s;
+    margin-right: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+} 
+
+#driverStanding:hover {
+    transform: scale(110%);
+    cursor: pointer;
+}
+
+#constructorStanding {
+    font-family: 'Dongle', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    height: 40px;
+    width: 150px;
+    background-color: rgb(255, 86, 86);
+    border-style: none;
+    border-radius: 5px;
+    color: black;
+    transition: all 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+} 
+
+#constructorStanding:hover {
+    transform: scale(110%);
+    cursor: pointer;
+}
+
+#affRaces{
+    display: block;
+}
+
+#affDriverStanding {
+    display: none; 
+}
+
+#affConstructorStanding {
+    display: none;
+}
+
+/* url de la trouvaille */
+/* https://www.w3schools.com/howto/howto_css_flip_card.asp */
+.flip-card {
+    background-color: transparent;
+    width: 430px;
+    height: 105px;
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    perspective: 1000px; /*Remove this if you don't want the 3D effect */
+}
+
+.flip-card-inner {
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.is-flipped {
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-inner {
+    cursor: pointer;
+    /* transform: scale(105%); */
+}
+
+/* .flip-card:active .flip-card-inner {
+    transform: rotateY(180deg);
+} */
+
+.divisionRacesFront, .divisionRacesBack{
+    position: absolute;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+.divisionRacesFront {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+    /* margin-left: 50px; */
+    border-radius: 10px; 
+    width: 400px;
+    height: 105px;
+    vertical-align: middle; 
+    padding-left: 0px;
+    padding-right: 30px;
+    font-size:80px; 
+    background-color: rgba(255, 86, 86, 0.5);
+}
+
+.divisionRacesBack {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+    width: 400px;
+    height: 105px;
+    vertical-align: middle; 
+    padding-left: 0px;
+    padding-right: 30px;
+    font-size:80px; 
+    background-color: rgba(255, 86, 86, 0.5);
+    transform: rotateY(180deg);
+}
+
+.divisionNextRacesFront {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+    width: 400px;
+    height: 105px;
+    vertical-align: middle; 
+    padding-left: 0px;
+    padding-right: 30px;
+    font-size:80px; 
+    background-color: rgba(89, 255, 86, 0.5);
+}
+
+.divisionNextRacesBack {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+    width: 400px;
+    height: 105px;
+    vertical-align: middle; 
+    padding-left: 0px;
+    padding-right: 30px;
+    font-size:80px; 
+    background-color: rgba(89, 255, 86, 0.5);
+    transform: rotateY(180deg);
+}
+
+.divisionNextRacesFront, .divisionNextRacesBack{
+    position: absolute;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.divisionPastRacesBack {
+    display: flex; 
+    flex-direction: row; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+    width: 400px;
+    height: 105px;
+    vertical-align: middle; 
+    padding-left: 0px;
+    padding-right: 30px;
+    font-size:80px; 
+    background-color: rgba(255, 86, 86, 0.5);
+    transform: rotateY(180deg);
+}
+
+
+
+.trophee {
+    width: 30px;
+    height: 30px;
+}

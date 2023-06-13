@@ -1,0 +1,158 @@
+body {
+    width: 450px;
+    height: 550px;
+    /*background-color: rgb(178, 255, 255);*/
+    background-color: rgb(255, 255, 255); 
+    /* border-style: solid; */
+}
+
+/* image en haut ************************************************************************************************************************************* */
+#logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#image {
+    width: 50px;
+    height: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* reste en bas ************************************************************************************************************************************** */
+#info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 477px;
+    width: 450px;
+}
+
+/* Bouton des catégories **************************************************************************************************************************** */
+#bouton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button{
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: rgba(0, 34, 255, 0);
+    border-style: none;
+    border-radius: 10%;
+    transition: background-color 0.15s;
+}
+
+.bustream {
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: rgba(85, 0, 125, 0);
+    border-style: none;
+    border-radius: 10%;
+    transition: background-color 0.15s;
+}
+.buesport {
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: rgba(178, 255, 255, 0);
+    border-style: none;
+    border-radius: 10%;
+    transition: background-color 0.15s;
+}
+.buhome {
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: rgba(0, 34, 255, 0);
+    border-style: none;
+    border-radius: 10%;
+    transition: background-color 0.15s;
+}
+.buformula1 {
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: rgba(255, 86, 86,0);
+    border-style: none;
+    border-radius: 10%;
+    transition: background-color 0.15s;
+}
+.bumanga {
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: rgba(255, 0, 255, 0);
+    border-style: none;
+    border-radius: 10%;
+    transition: background-color 0.15s;
+}
+.bustream:hover {
+    background-color: rgba(85, 0, 125, 0.8);
+    transform: scale(110%);
+    cursor: pointer;
+}
+.buesport:hover {
+    background-color: rgba(178, 255, 255, 1);
+    transform: scale(110%);
+    cursor: pointer;
+}
+.buhome:hover {
+    background-color: rgba(0, 34, 255, 0.477);
+    transform: scale(110%);
+    cursor: pointer;
+}
+.buformula1:hover {
+    background-color: rgb(255, 86, 86);
+    transform: scale(110%);
+    cursor: pointer;
+}
+.bumanga:hover {
+    background-color: rgba(255, 0, 255, 1);
+    transform: scale(110%);
+    cursor: pointer;
+}
+
+/* Options ******************************************************************************************************************************** */
+.options {
+    /* display: block; */
+    padding: 5px;
+    width: 440px;
+    height: 40px;
+
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: center;
+    z-index: 100;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#validation {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    transition: all 0.1s;
+}
+
+#validation:hover {
+    transform: scale(120%);
+}
+
+/* Affichage ********************************************************************************************************************************* */
+#affichage {
+    width: 430px;
+    height:360px;
+    padding: 10px;
+}
+
+
+
+
+
+

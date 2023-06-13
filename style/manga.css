@@ -1,0 +1,43 @@
+/* Manga ****************************************************************************************************************************************** */
+#divManga {
+    display:none;
+    width:330px;
+    height:222px;
+}
+
+
+/* Options ******************************************************************************************************************************************* */
+#titre {
+    display: none;
+}
+
+#inTitre {
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    height: 40px;
+    width: 150px;
+    background-color: rgb(251, 149, 234);
+    border-style: none;
+    border-radius: 5px;
+    color: black;
+    transition: all 0.1s;
+}
+
+#inTitre:hover {
+    transform: scale(110%);
+}
+
+#inTitre::placeholder {
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+    align-self: center; 
+}
+
+/* Affichage ************************************************************************************************************************************* */
+
+
+
+

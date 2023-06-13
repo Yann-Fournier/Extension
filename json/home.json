@@ -1,0 +1,107 @@
+{
+    "Favoris": [
+        {
+            "Id": "1",
+            "Image": "github.png",
+            "Nom" : "Yann-Fournier-Fac",
+            "Url": "https://github.com/Yann-Fournier-Fac?tab=repositories"
+        },
+        {
+            "Id": "2",
+            "Image": "github.png",
+            "Nom" : "Yann-Fournier",
+            "Url": "https://github.com/Yann-Fournier?tab=repositories"
+        },
+        {
+            "Id": "3",
+            "Image": "twitch.png",
+            "Nom" : "Twitch",
+            "Url": "https://www.twitch.tv/"
+        },
+        {
+            "Id": "4",
+            "Image": "youtube.png",
+            "Nom" : "Youtube",
+            "Url": "https://youtube.com"
+        },
+        {
+            "Id": "5",
+            "Image": "liquipedia_logo.png",
+            "Nom" : "Liquipedia",
+            "Url": "https://Liquipedia.net"
+        },
+        {
+            "Id": "6",
+            "Image": "Ynov.png",
+            "Nom" : "Extranet Ynov",
+            "Url": "https://extranet.ynov.com/home"
+        },
+        {
+            "Id": "7",
+            "Image": "ia.png",
+            "Nom" : "Chat GPT",
+            "Url": "https://chat.openai.com/"
+        },
+        {
+            "Id": "8",
+            "Image": "linkedin.png",
+            "Nom" : "Linkedin learning",
+            "Url": "https://www.linkedin.com/learning/me/my-library/in-progress?u=56745737"
+        },
+        {
+            "Id": "9",
+            "Image": "outlook.png",
+            "Nom" : "Outlook",
+            "Url": "https://outlook.office.com/mail/"
+        },
+        {
+            "Id": "10",
+            "Image": "Gmail_icon_(2020).svg.png",
+            "Nom" : "Gmail",
+            "Url": "https://mail.google.com/mail/u/1/?zx=yroyi3fgg6hx#inbox"
+        },
+        {
+            "Id": "11",
+            "Image": "Karmine_Corp_logo.png",
+            "Nom" : "Karmine Corp",
+            "Url": "https://www.karminecorp.fr/"
+        },
+        {
+            "Id": "12",
+            "Image": "vitality.png",
+            "Nom" : "Vitality",
+            "Url": "https://shop.vitality.gg/"
+        },
+        {
+            "Id": "13",
+            "Image": "form1.png",
+            "Nom" : "Formula 1 Store",
+            "Url": "https://f1store2.formula1.com/fr/"
+        },
+        {
+            "Id": "14",
+            "Image": "gitea.png",
+            "Nom" : "Gitea",
+            "Url": "https://ytrack.learn.ynov.com/git/fyann"
+        },
+        {
+            "Id": "15",
+            "Image": "intra.png",
+            "Nom" : "Intra",
+            "Url": "https://ytrack.learn.ynov.com/intra/pyc/profile?event=589"
+        },
+        {
+            "Id": "16",
+            "Image": "moodle.png",
+            "Nom" : "Moodle",
+            "Url": "https://moodle.ynov.com/my/"
+        },
+        {
+            "Id": "17",
+            "Image": "postman.png",
+            "Nom" : "Postman",
+            "Url": "https://web.postman.co/home"
+        } 
+
+    ]
+}
