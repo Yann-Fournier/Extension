@@ -14,9 +14,9 @@ man.innerHTML="Manga";
 divManga.appendChild(man);
 
 const urlManga = 'https://anilistmikilior1v1.p.rapidapi.com/getAnimeList';
-const headers = {
+const headerManga = {
 	method: 'POST',
-	headers: {
+	headerManga2: {
 		'content-type': 'application/x-www-form-urlencoded',
 		'X-RapidAPI-Key': 'd851300a01mshbd5199c8ec6fa3ap18ade3jsn969e73f40282',
 		'X-RapidAPI-Host': 'Anilistmikilior1V1.p.rapidapi.com'
@@ -28,7 +28,7 @@ const headers = {
 
 
 function Manga() {
-    // fetch(urlManga, headers)
+    // fetch(urlManga, headerManga)
     // .then((response) => {
     //     console.log("2");
     //     return response.json();

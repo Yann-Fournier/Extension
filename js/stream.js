@@ -8,7 +8,7 @@ document.getElementById('stream').addEventListener('click', function() {
 
 // Stream ***************************************************************************************************************************************************************
 var clientId = '09v5b6vch1hsywuyw8j0d5gqxik09j';
-var token = 'u1336g3trrgsdwayhw33g5g3ik463f';
+var token = 't3n7f5jggjz805e0o5ru1gab2ezpia';
 var twitchURL = '';
 var header = {
     'Authorization': `Bearer ${token}`,
@@ -55,10 +55,7 @@ function cb(json) {
         }
         var thumbnail = document.createElement('img');
         thumbnail.src = img;
-        // thumbnail.src = Streamer[json.data[0].user_name];
-        thumbnail.style = "margin-right : 5px;border-radius:50%; width:30px; height:30px;display:inline;"
-        // thumbnail.src = json2.Streamer[0].img;
-        //thumbnail.style = "display: flex; radius:50%;";
+        thumbnail.style = "margin-right : 5px;border-radius:50%; width:30px; height:30px;display:inline;";
 
         var name = document.createElement('a');
         name.href = "https://twitch.tv/" + json.data[0].user_name;
@@ -97,6 +94,7 @@ function getStream(id) {
     var url = `https://api.twitch.tv/helix/streams?user_id=${id}`;
     fetchTwitchAPI(url);
 }
+getStream()
 
 function Stream(json) {
     divStream.innerHTML = "";
@@ -137,15 +135,25 @@ function getImage(json) {
     }
 }
 
-fetch(" https://api.twitch.tv/helix/users/follows?from_id=884412255&first=100", { 
-    headers: header 
-}).then((response) =>  {
-    return response.json();
-}).then((json) => {
-    // console.log(json);
-    getImage(json);
-    Stream(json);
-});
+function getStreamerList() {
+    fetch("https://api.twitch.tv/helix/users/follows?from_id=884412255&first=100", { 
+        headers: header 
+    }).then((response) =>  {
+        return response.json();
+    }).then((json) => {
+        // console.log(json);
+        getImage(json);
+        Stream(json);
+    });
+}
+
+// Main code of stream.js
+try {
+    getStreamerList();
+} catch {
+    console.log("Bearer Token expired. Please create another one (acces token in Postman)")
+}
+
 
 
 
