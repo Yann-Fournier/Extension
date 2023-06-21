@@ -7,12 +7,12 @@ document.getElementById('stream').addEventListener('click', function() {
 
 
 // Stream ***************************************************************************************************************************************************************
-var clientId = 'U2FsdGVkX1+9HMcPGAwcbQbYEbqEZe+yFrFwhHVOioJL4CGP61DjLmd7pJtKMwvc';
-var token = 'U2FsdGVkX1+nsVWK9l8FdjD5JATdQxIoYwq3Z6pkfzy6V6xc3fmAFX4kwR2M3TUu';
+var clientId = '09v5b6vch1hsywuyw8j0d5gqxik09j';
+var token = 't3n7f5jggjz805e0o5ru1gab2ezpia';
 var twitchURL = '';
 var header = {
-    'Authorization': `Bearer ${CryptoJS.AES.decrypt(token, 'secret key 123').toString(CryptoJS.enc.Utf8)}`,
-    'Client-Id': CryptoJS.AES.decrypt(clientId, 'secret key 123').toString(CryptoJS.enc.Utf8)
+    'Authorization': `Bearer ${token}`,
+    'Client-Id': clientId
 }
 urlName ="https://api.twitch.tv/helix/users?login=";
 urlId ="https://api.twitch.tv/helix/streams?user_id=";
