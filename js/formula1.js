@@ -143,7 +143,7 @@ currentdate = new Date();
 var oneJan = new Date(currentdate.getFullYear(),0,1);
 var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
 var weekNBR = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
-// localStorage.setItem('Week Of The Year', 22);
+// console.log(weekNBR)
 
 var urlRaces = "http://ergast.com/api/f1/current.json";
 var urlDrivers = "http://ergast.com/api/f1/current/driverStandings.json";
@@ -151,6 +151,7 @@ var urlConstructors = "http://ergast.com/api/f1/current/constructorStandings.jso
 var urlNextGP = "http://ergast.com/api/f1/current/next.json";
 
 let week;
+let dejaRecup = false;
 try {
     week = localStorage.getItem('Week Of The Year');
 } catch {
@@ -158,81 +159,57 @@ try {
     week = weekNBR-1;
 }
 
+fetch(urlRaces)
+.then((response) =>  {
+    return response.json();
+}).then((json) => {
+    localStorage.setItem('Races Front', JSON.stringify(json));
+});
 
-// 
-if (((weekNBR > week) || (weekNBR = 1))&& ((currentdate.getDay() == 1 && currentdate.getHours() >= 12) || (currentdate.getDay() > 1))) {
-    // fetching what I need and put it in LocalStorage ***************************************************************    
-    fetch(urlRaces)
-    .then((response) =>  {
-        return response.json();
-    }).then((json) => {
-        localStorage.setItem('Races Front', JSON.stringify(json));
-    });
+fetch(urlNextGP)
+.then((response) =>  {
+    return response.json();
+}).then((json) => {
+    localStorage.setItem('Next GP', JSON.stringify(json));
+});
 
-    fetch(urlNextGP)
-    .then((response) =>  {
-        return response.json();
-    }).then((json) => {
-        localStorage.setItem('Next GP', JSON.stringify(json));
-    });
+writeNext(0);
 
-    writeNext(0);
+fetch(urlDrivers)
+.then((response) =>  {
+    return response.json();
+}).then((json) => {
+    localStorage.setItem('Drivers', JSON.stringify(json));
+});
 
-    fetch(urlDrivers)
-    .then((response) =>  {
-        return response.json();
-    }).then((json) => {
-        localStorage.setItem('Drivers', JSON.stringify(json));
-    });
+fetch(urlConstructors)
+.then((response) =>  {
+    return response.json();
+}).then((json) => {
+    localStorage.setItem('Constructors', JSON.stringify(json));
+});
 
-    fetch(urlConstructors)
-    .then((response) =>  {
-        return response.json();
-    }).then((json) => {
-        localStorage.setItem('Constructors', JSON.stringify(json));
-    });
+getAllPodium();
 
-    getAllPodium();
+localStorage.setItem('Week Of The Year', weekNBR);
+// console.log("Les data sont en train d'etre récupérer")
 
-    localStorage.setItem('Week Of The Year', weekNBR);
-    console.log("Les data sont en train d'etre récupérer")
-
-    var racesFront = JSON.parse(localStorage.getItem('Races Front'))
-    var conducteur = JSON.parse(localStorage.getItem('Drivers'))
-    var constructeur = JSON.parse(localStorage.getItem('Constructors'))
-    var prochainGP = JSON.parse(localStorage.getItem('Next GP'))
-    // console.log(racesFront)
-    // console.log(conducteur)
-    // console.log(constructeur)
-    // console.log(prochainGP)
-    RacesFront(racesFront)
-    Drivers(conducteur);
-    Constructors(constructeur)
-    NextGP(prochainGP)
-    for (let i = 1; i <= 23; i++) {
-        var podium = JSON.parse(localStorage.getItem('podium' + i));
-        Podium(podium);
-    }
-} else {
-    console.log("data déjà récupérer")
-    var racesFront = JSON.parse(localStorage.getItem('Races Front'))
-    var conducteur = JSON.parse(localStorage.getItem('Drivers'))
-    var constructeur = JSON.parse(localStorage.getItem('Constructors'))
-    var prochainGP = JSON.parse(localStorage.getItem('Next GP'))
-    // console.log(racesFront)
-    // console.log(conducteur)
-    // console.log(constructeur)
-    // console.log(prochainGP)
-    RacesFront(racesFront)
-    Drivers(conducteur);
-    Constructors(constructeur)
-    NextGP(prochainGP)
-    for (let i = 1; i <= 23; i++) {
-        var podium = JSON.parse(localStorage.getItem('podium' + i));
-        Podium(podium);
-    }
+var racesFront = JSON.parse(localStorage.getItem('Races Front'))
+var conducteur = JSON.parse(localStorage.getItem('Drivers'))
+var constructeur = JSON.parse(localStorage.getItem('Constructors'))
+var prochainGP = JSON.parse(localStorage.getItem('Next GP'))
+// console.log(racesFront)
+// console.log(conducteur)
+// console.log(constructeur)
+// console.log(prochainGP)
+RacesFront(racesFront)
+Drivers(conducteur);
+Constructors(constructeur)
+NextGP(prochainGP)
+for (let i = 1; i <= 23; i++) {
+    var podium = JSON.parse(localStorage.getItem('podium' + i));
+    Podium(podium);
 }
-
 
 function writeNext(i){
     if(i == 2)

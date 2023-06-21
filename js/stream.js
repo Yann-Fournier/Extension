@@ -120,7 +120,6 @@ function writeNextStream(i){
 }
 
 function getImage(json) {
-    console.log('ok')
     var imgStreamer = {};
     for (let i=0; i < json.data.length; i++) {
         var url = `https://api.twitch.tv/helix/users?login=${json.data[i].to_login}`;
