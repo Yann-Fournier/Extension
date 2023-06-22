@@ -1,6 +1,15 @@
 var divEsport = document.getElementById('divEsport');
 var game = document.getElementById('game');
-var inGame = document.getElementById('inGame');
+// boutons
+var buLOL = document.getElementById('buLOL');
+var buValo = document.getElementById('buValo');
+var buTFT = document.getElementById('buTFT');
+var buRL = document.getElementById('buRL');
+// div
+var divLOL = document.getElementById('affLOL');
+var divValo = document.getElementById('affValo');
+var divTFT = document.getElementById('affTFT');
+var divRL = document.getElementById('affRL');
 
 
 document.getElementById('esport').addEventListener('click', function()  {
@@ -8,18 +17,23 @@ document.getElementById('esport').addEventListener('click', function()  {
     displayDivEsport();
 });
 
-document.getElementById('buChoseGame').addEventListener('click', function() {
-    console.log(inGame.value);
+buLOL.addEventListener('click', function() {
+    displayLOL();
+});
+
+buValo.addEventListener('click', function() {
+    displayValo();
+});
+
+buTFT.addEventListener('click', function() {
+    displayTFT();
+});
+
+buRL.addEventListener('click', function() {
+    displayRL();
 });
 
 // Esport ***************************************************************************************************************************************************************
-//Test
-var esp = document.createElement('p');
-esp.innerHTML="Esport";
-divEsport.appendChild(esp);
-
-function Esport() {}
-
 function displayDivEsport() {
     // affiche info
     divStream.style = "display:none;";
@@ -34,7 +48,7 @@ function displayDivEsport() {
     titre.style = "display:none;";
     year.style = "display:none;";
     addFav.style = "display:none;"
-    game.style = 'display:flex;'
+    game.style = "display:flex; flex-direction: row; justify-content: space-between;"
 
     // Changement d'ambiance
     for (let i=0; i<boutons.length; i++) {
@@ -46,13 +60,57 @@ function displayDivEsport() {
     //corps.style = "background-color: rgba(0, 34, 255, 0.477);";
     icon.src = "../images/icons/esport.png";
     icon.style = "width:50px; height:50px;"
-
-    Esport();
 }
 
-// const Options = {method: 'GET', headers: {accept: 'application/json'}};
+function displayLOL() {
+    // boutons
+    buLOL.className = "gameSelected";
+    buValo.className = "gameNotSelected";
+    buTFT.className = "gameNotSelected";
+    buRL.className = "gameNotSelected";
+    // div
+    divLOL.className = "affGame";
+    divValo.className = "notAffGame";
+    divTFT.className = "notAffGame";
+    divRL.className = "notAffGame";
+}
 
-// fetch('https://api.pandascore.co/additions?sort=&page=1&per_page=50&type=&videogame=', Options)
-// .then(response => response.json())
-// .then(response => console.log(response))
-// .catch(err => console.error(err));
+function displayValo() {
+    // boutons
+    buLOL.className = "gameNotSelected";
+    buValo.className = "gameSelected";
+    buTFT.className = "gameNotSelected";
+    buRL.className = "gameNotSelected";
+    // div
+    divLOL.className = "notAffGame";
+    divValo.className = "affGame";
+    divTFT.className = "notAffGame";
+    divRL.className = "notAffGame";
+}
+
+function displayTFT() {
+    // boutons
+    buLOL.className = "gameNotSelected";
+    buValo.className = "gameNotSelected";
+    buTFT.className = "gameSelected";
+    buRL.className = "gameNotSelected";
+    // div
+    divLOL.className = "notAffGame";
+    divValo.className = "notAffGame";
+    divTFT.className = "affGame";
+    divRL.className = "notAffGame";
+}
+
+function displayRL() {
+    // boutons
+    buLOL.className = "gameNotSelected";
+    buValo.className = "gameNotSelected";
+    buTFT.className = "gameNotSelected";
+    buRL.className = "gameSelected";
+    // div
+    divLOL.className = "notAffGame";
+    divValo.className = "notAffGame";
+    divTFT.className = "notAffGame";
+    divRL.className = "affGame";
+}
+

@@ -66,14 +66,10 @@
                 <!-- <div id="addStream"></div> -->
 
                 <div id="game">
-                    <select name="le_nom" id="inGame" placeholder="Game">
-                        <option value="RL">Rocket League</option>
-                        <option value="VAL">Valorant</option>
-                        <option value="LOL">League of Legend</option>
-                    </select>
-                    <button id="buChoseGame">
-                        <img id="validation" src="../images/icons/validation.png" >
-                    </button>
+                    <button id="buLOL" class="gameSelected">LOL</button>
+                    <button id="buValo" class="gameNotSelected">Valo</button>
+                    <button id="buTFT" class="gameNotSelected">TFT</button>
+                    <button id="buRL" class="gameNotSelected">RL</button>
                 </div>
 
                 <div id="addFavoris">
@@ -83,15 +79,9 @@
                 </div>
 
                 <div id="year">
-                    <button id="races">
-                        Races
-                    </button>
-                    <button id="driverStanding">
-                        Driver Standing
-                    </button>
-                    <button id="constructorStanding">
-                        Constructor Standing
-                    </button>
+                    <button id="races">Races</button>
+                    <button id="driverStanding">Driver Standing</button>
+                    <button id="constructorStanding">Constructor Standing</button>
                 </div>
                 
                 <div id="titre">
@@ -103,7 +93,12 @@
             </div>
             <div id="affichage">
                 <div id="divStream"></div>
-                <div id="divEsport"></div>
+                <div id="divEsport">
+                    <div id="affLOL" class="affGame">LOL</div>
+                    <div id="affValo" class="notAffGame">Valo</div>
+                    <div id="affTFT" class="notAffGame">TFT</div>
+                    <div id="affRL" class="notAffGame">RL</div>
+                </div>
                 <div id="divHome"></div>
                 <div id="divFormula1">
                     <div id="affRaces"></div>
@@ -117,7 +112,7 @@
 
         <script src="../js/cryptage.js"></script>
         <script src="../js/popup.js"></script>
-        <script src="../js/stream.js"></script>
+        <!-- <script src="../js/stream.js"></script> -->
         <script src="../js/esport.js"></script>
         <script src="../js/home.js"></script>
         <script src="../js/formula1.js"></script>
