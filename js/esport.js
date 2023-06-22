@@ -114,11 +114,19 @@ function displayRL() {
     divRL.className = "affGame";
 }
 
+var XRapidAPIKey = "11ff4ee1c9msh670824dcb96f797p1636d4jsn021b0d7e1a47";
+var XRapidAPIHost = "league-of-legends-esports.p.rapidapi.com";
+var head = {
+    'X-RapidAPI-Key' : XRapidAPIKey,
+    'X-RapidAPI-Host' : XRapidAPIHost
+}
+
 // LOL ******************************************************************************************************************************************************************************************
 currentdate = new Date();
 var oneJan = new Date(currentdate.getFullYear(),0,1);
 var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
 var weekNBR = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
+// localStorage.setItem('Week Of The Year', 22);
 // console.log(weekNBR);
 
 let week = localStorage.getItem('Week Of The Year');
@@ -126,10 +134,20 @@ let week = localStorage.getItem('Week Of The Year');
 var lfl, lec, emeaMasters;
 
 var urlLeagues = "https://league-of-legends-esports.p.rapidapi.com/leagues";
+var calendrierLFL = "https://league-of-legends-esports.p.rapidapi.com/schedule?leagueId=105266103462388553";
 
 
 if (week < weekNBR || weekNBR == 1) {
-    
+    fetch(calendrierLFL, {
+        headers:head
+    }).then((response) =>  {
+        return response.json();
+    }).then((json) => {
+        localStorage.setItem("Calendrier LFL", json);
+        console.log(json);
+    });
+
+    localStorage.setItem('Week Of The Year', weekNBR);
 }
 
 
