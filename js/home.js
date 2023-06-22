@@ -42,12 +42,8 @@ function displayDivHome() {
     divManga.style = "display:none;";
     divHome.style = "display:block;width:330px;height:222px;";
 
-    // affiche choice
-    options.style = "padding: 5px;width: 440px;height: 40px;display: flex;justify-content: center;z-index: 100;margin-top: 10px;margin-bottom: 10px;";
-    titre.style = "display:none;";
-    year.style = "display:none;";
-    game.style = 'display:none;';
-    addFav.style = "display:flex;";
+    // affiche Choice
+    options.style = 'display:none;';
 
     // Changement d'ambiance
     for (let i=0; i<boutons.length; i++) {

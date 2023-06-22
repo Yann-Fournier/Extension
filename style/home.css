@@ -4,6 +4,7 @@
     flex-direction: column;
     vertical-align: middle;
     justify-content: center;
+    margin-top: 20px;
     /* background-color: rgba(0, 34, 255, 0.477); */
 }
 
@@ -26,15 +27,14 @@
     background-color: rgba(0, 34, 255, 0.2); */
 }
 
-.divisionFav:hover {
-    /* background-color: rgba(0, 34, 255, 0.477); */
+/* .divisionFav:hover {
     border-style: solid;
     margin-top: 3px; 
     margin-bottom: 3px;
     margin-left: 13px;
     margin-right: 13px;
     border-width: 2px;
-} 
+}  */
 
 .linkHome {
     height: 10px; 

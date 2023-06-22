@@ -139,25 +139,10 @@ function displayDivFormula1() {
 
 
 // Get Data $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-currentdate = new Date();
-var oneJan = new Date(currentdate.getFullYear(),0,1);
-var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
-var weekNBR = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
-// console.log(weekNBR)
-
 var urlRaces = "http://ergast.com/api/f1/current.json";
 var urlDrivers = "http://ergast.com/api/f1/current/driverStandings.json";
 var urlConstructors = "http://ergast.com/api/f1/current/constructorStandings.json";
 var urlNextGP = "http://ergast.com/api/f1/current/next.json";
-
-let week;
-let dejaRecup = false;
-try {
-    week = localStorage.getItem('Week Of The Year');
-} catch {
-    localStorage.setItem('Week Of The Year', weekNBR-1);
-    week = weekNBR-1;
-}
 
 fetch(urlRaces)
 .then((response) =>  {
@@ -190,9 +175,6 @@ fetch(urlConstructors)
 });
 
 getAllPodium();
-
-localStorage.setItem('Week Of The Year', weekNBR);
-// console.log("Les data sont en train d'etre récupérer")
 
 var racesFront = JSON.parse(localStorage.getItem('Races Front'))
 var conducteur = JSON.parse(localStorage.getItem('Drivers'))

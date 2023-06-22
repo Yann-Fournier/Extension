@@ -33,7 +33,7 @@ buRL.addEventListener('click', function() {
     displayRL();
 });
 
-// Esport ***************************************************************************************************************************************************************
+// Affichage ***************************************************************************************************************************************************************
 function displayDivEsport() {
     // affiche info
     divStream.style = "display:none;";
@@ -113,4 +113,24 @@ function displayRL() {
     divTFT.className = "notAffGame";
     divRL.className = "affGame";
 }
+
+// LOL ******************************************************************************************************************************************************************************************
+currentdate = new Date();
+var oneJan = new Date(currentdate.getFullYear(),0,1);
+var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
+var weekNBR = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
+// console.log(weekNBR);
+
+let week = localStorage.getItem('Week Of The Year');
+// console.log(week);
+var lfl, lec, emeaMasters;
+
+var urlLeagues = "https://league-of-legends-esports.p.rapidapi.com/leagues";
+
+
+if (week < weekNBR || weekNBR == 1) {
+    
+}
+
+
 
