@@ -59,20 +59,6 @@ function displayDivHome() {
 
 
 // Home *****************************************************************************************************************************************************************
-
-// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-// let favoris = [];
-// const savedFavoris = JSON.parse(localStorage.getItem('favoris'));
-// if (Array.isArray(savedFavoris)) {
-//     favoris = savedFavoris;
-// } else {
-//     favoris = [];
-// }
-
-// function saveFavoris() {
-//     localStorage.setItem('favoris', JSON.stringify(favoris));
-// }
-
 function renderHome(array) {
     document.getElementById('divHome').innerHTML = '';
 
@@ -83,15 +69,14 @@ function renderHome(array) {
         const image =   document.createElement('img');
         if(elm.Image.length !== 0) {
             image.src = '../images/favoris/' + elm.Image;
-            
         } else {
             image.src = '../images/favoris/interrogation.png';
         }
-        if (elm.Id === "13") {
+        if (elm.Nom === "Formula 1 Store") {
             image.style = "width: 50px; height:25px;"
-        } else if (elm.Id === "5") {
+        } else if (elm.Nom === "Liquipedia") {
             image.style = "width: 45px; height:30px;"
-        }else if (elm.Id === "10") {
+        }else if (elm.Nom === "Gmail") {
             image.style = "width: 35px; height:25px;"
         } else {
             image.style = "width: 30px; height:30px;"
@@ -111,87 +96,19 @@ function renderHome(array) {
         imgCroix.classList = 'croixFav';
         imgCroix.src = '../images/icons/croix.png';
         deletButtom.appendChild(imgCroix);
-        //deletButtom.onclick = deletFavoris;
         deletButtom.id = elm.Id;
         imgCroix.id = elm.Id
-        //console.log(deletButtom.id);
         division.appendChild(deletButtom)
 
         divHome.appendChild(division);
     });
+
+    var parag = document.createElement('p')
+    parag.innerHTML = "para pour faire une bande blanche en dessous (style)";
+    parag.style = "color : rgb(255, 255, 255); margin: 0px;font-size:7px;"
+    divHome.appendChild(parag);
 }
 
-//renderHome(favoris);
-
-// // faire html en rapport
-// function addFavoris() {
-//     const id = '' + new Date().getTime();
-//     //console.log(id);
-
-//     const inImage = document.getElementById('inImageFav');
-//     var image;
-//     if (inImage.value.length === 0) {
-//         image = 'interrogation.png';
-//     } else {
-//         image = inImage.value;
-//     }
-
-//     const inNom = document.getElementById('inNomFav');
-//     var nom;
-//     if (inNom.value.length === 0) {
-//         nom = 'inconnu';
-//     } else {
-//         nom = inNom.value;
-//     }
-
-//     const inUrl = document.getElementById('inUrlFav');
-//     var url;
-//     if (inUrl.value.length === 0) {
-//         url = 'https://google.com'
-//     } else {
-//         url = inUrl.value;
-//     }
-
-//     favoris.push(
-//         {Id:id, Image:image, Nom:nom, Url:url}
-//     )
-//     saveFavoris();
-//     menuAddFav.style = "display:none";
-//     renderHome(favoris);
-// }
-
-// function val(idToDelete) {
-//     favoris = favoris.filter(function (fav) {
-//         if (fav.Id === idToDelete) {
-//             //console.log(fav.id);
-//             return false;
-//         } else {
-//             return true;
-//         }
-//     });
-//     //console.log(favoris);
-//     saveFavoris();
-//     renderHome(favoris);
-//     //console.log(favoris);
-// }
-
-// function deletFavoris(event) {
-//     const deleteButtom = event.target;
-//     console.log(deleteButtom)
-//     const idToDelete = deleteButtom.id;
-//     console.log(idToDelete);
-//     //console.log(idToDelete);
-
-//     val(idToDelete);
-
-    
-// }
-
-// function displayAddMenu() {
-//     MenuAddFav.style = "display: block;"
-// }
-
-// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 fetch('../json/home.json')
 .then((response) => {

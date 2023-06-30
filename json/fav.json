@@ -1,0 +1,105 @@
+{
+    "Favoris": [
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=1x&pageUrl=https%3A%2F%2Fgithub.com%2FYann-Fournier-Fac%3Ftab%3Drepositories&allowGoogleServerFallback=0",
+            "Nom" : "Yann-Fournier-Fac",
+            "Url": "https://github.com/Yann-Fournier-Fac?tab=repositories"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=1x&pageUrl=https%3A%2F%2Fgithub.com%2FYann-Fournier-Fac%3Ftab%3Drepositories&allowGoogleServerFallback=0",
+            "Nom" : "Yann-Fournier",
+            "Url": "https://github.com/Yann-Fournier?tab=repositories"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=1x&pageUrl=https%3A%2F%2Fwww.twitch.tv%2F&allowGoogleServerFallback=0",
+            "Nom" : "Twitch",
+            "Url": "https://www.twitch.tv/"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=1x&pageUrl=https%3A%2F%2Fwww.youtube.com%2F&allowGoogleServerFallback=0",
+            "Nom" : "Youtube",
+            "Url": "https://youtube.com"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=2x&pageUrl=https%3A%2F%2Fliquipedia.net%2F&allowGoogleServerFallback=0",
+            "Nom" : "Liquipedia",
+            "Url": "https://Liquipedia.net"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=2x&pageUrl=https%3A%2F%2Fsso.ynov.com%2Flogin%3Fservice%3Dhttps%253A%252F%252Fmoodle.ynov.com%252Flogin%252Findex.php&allowGoogleServerFallback=0",
+            "Nom" : "Extranet Ynov",
+            "Url": "https://extranet.ynov.com/home"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=2x&pageUrl=https%3A%2F%2Fchat.openai.com%2Fauth%2Flogin%3Fnext%3D%252F&allowGoogleServerFallback=0",
+            "Nom" : "Chat GPT",
+            "Url": "https://chat.openai.com/"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=2x&pageUrl=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fme%2Fmy-library%2Fin-progress%3FaccountId%3D56745737%26u%3D56745737%26success%3Dtrue%26authUUID%3DntGL3%252FwPTcqlmJ6x5pB%252BMA%253D%253D&allowGoogleServerFallback=0",
+            "Nom" : "Linkedin learning",
+            "Url": "https://www.linkedin.com/learning/me/my-library/in-progress?u=56745737"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=1x&pageUrl=https%3A%2F%2Foutlook.office.com%2Fmail%2F&allowGoogleServerFallback=0",
+            "Nom" : "Outlook",
+            "Url": "https://outlook.office.com/mail/"
+        },
+        {
+            "Image": "Gmail_icon_(2020).svg.png",
+            "Nom" : "Gmail",
+            "Url": "https://mail.google.com/mail/u/1/?zx=yroyi3fgg6hx#inbox"
+        },
+        {
+            "Image": "Karmine_Corp_logo.png",
+            "Nom" : "Karmine Corp",
+            "Url": "https://www.karminecorp.fr/"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=1x&pageUrl=https%3A%2F%2Fshop.vitality.gg%2F&allowGoogleServerFallback=0",
+            "Nom" : "Vitality",
+            "Url": "https://shop.vitality.gg/"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=1x&pageUrl=https%3A%2F%2Fshop.vitality.gg%2F&allowGoogleServerFallback=0",
+            "Nom" : "Formula 1 Store",
+            "Url": "https://f1store2.formula1.com/fr/"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=1x&pageUrl=https%3A%2F%2Fytrack.learn.ynov.com%2Fgit%2Ffyann&allowGoogleServerFallback=0",
+            "Nom" : "Gitea",
+            "Url": "https://ytrack.learn.ynov.com/git/fyann"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=2x&pageUrl=https%3A%2F%2Fytrack.learn.ynov.com%2Fintra%2Fpyc%2Fprofile%3Fevent%3D589&allowGoogleServerFallback=0",
+            "Nom" : "Intra",
+            "Url": "https://ytrack.learn.ynov.com/intra/pyc/profile?event=589"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=1x&pageUrl=https%3A%2F%2Fmoodle.ynov.com%2Fmy%2F&allowGoogleServerFallback=0",
+            "Nom" : "Moodle",
+            "Url": "https://moodle.ynov.com/my/"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=1x&pageUrl=https%3A%2F%2Fweb.postman.co%2Fhome&allowGoogleServerFallback=0",
+            "Nom" : "Postman",
+            "Url": "https://web.postman.co/home"
+        },
+        {
+            "Image": "DSM.png",
+            "Nom": "f_nas",
+            "Url": "http://192.168.1.20:5000/"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=1x&pageUrl=https%3A%2F%2Fwww.chess.com%2F&allowGoogleServerFallback=0",
+            "Nom": "chess.com",
+            "Url": "https://chess.com"
+        },
+        {
+            "Image": "brave://favicon2/?size=16&scaleFactor=1x&pageUrl=https%3A%2F%2Fwww.chess.com%2F&allowGoogleServerFallback=0",
+            "Nom": "Netflix",
+            "Url": "https://www.netflix.com/"
+        }
+
+    ]
+}
