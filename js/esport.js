@@ -114,10 +114,10 @@ function displayRL() {
     divRL.className = "affGame";
 }
 
-var XRapidAPIKey = "11ff4ee1c9msh670824dcb96f797p1636d4jsn021b0d7e1a47";
+var XRapidAPIKey = "§§¤¤U**§R6Ah0ùzK!7UtR,6ù¤z6ze§ùjùtU1hIK7§,Ktz*§9Uz";
 var XRapidAPIHost = "league-of-legends-esports.p.rapidapi.com";
 var head = {
-    'X-RapidAPI-Key' : XRapidAPIKey,
+    'X-RapidAPI-Key' : decryptage(13, XRapidAPIKey),
     'X-RapidAPI-Host' : XRapidAPIHost
 }
 
@@ -135,9 +135,25 @@ var lfl, lec, emeaMasters;
 
 var urlLeagues = "https://league-of-legends-esports.p.rapidapi.com/leagues";
 var calendrierLFL = "https://league-of-legends-esports.p.rapidapi.com/schedule?leagueId=105266103462388553";
-
+var calendrierLEC = "https://league-of-legends-esports.p.rapidapi.com/schedule?leagueId=98767991302996019";
+var calendrierLCK = "https://league-of-legends-esports.p.rapidapi.com/schedule?leagueId=98767991310872058";
+var calendrierEMEAMasters = "https://league-of-legends-esports.p.rapidapi.com/schedule?leagueId=100695891328981122";
 
 if (week < weekNBR || weekNBR == 1) {
+    console.log("leagues");
+    fetch(urlLeagues, {
+        headers:head
+    }).then((response) =>  {
+        return response.json();
+    }).then((json) => {
+        localStorage.setItem("Logo LFL", json.data.leagues [19].image);
+        localStorage.setItem("Logo LEC", json.data.leagues[8].image);
+        localStorage.setItem("Logo LCK", json.data.leagues[5].image);
+        localStorage.setItem("Logo EMEA Master", json.data.leagues[18].image);
+        console.log(json);
+    });
+
+    console.log("LFL");
     fetch(calendrierLFL, {
         headers:head
     }).then((response) =>  {
@@ -146,6 +162,39 @@ if (week < weekNBR || weekNBR == 1) {
         localStorage.setItem("Calendrier LFL", json);
         console.log(json);
     });
+
+    console.log("LEC");
+    fetch(calendrierLEC, {
+        headers:head
+    }).then((response) =>  {
+        return response.json();
+    }).then((json) => {
+        localStorage.setItem("Calendrier LEC", json);
+        console.log(json);
+    });
+
+    writeNext(0);
+
+    console.log("LCK");
+    fetch(calendrierLCK, {
+        headers:head
+    }).then((response) =>  {
+        return response.json();
+    }).then((json) => {
+        localStorage.setItem("Calendrier LCK", json);
+        console.log(json);
+    });
+
+    console.log("EMEA Master");
+    fetch(calendrierEMEAMasters, {
+        headers:head
+    }).then((response) =>  {
+        return response.json();
+    }).then((json) => {
+        localStorage.setItem("Calendrier EMEA Masters", json);
+        console.log(json);
+    });
+
     console.log("fetch de lol")
     localStorage.setItem('Week Of The Year', weekNBR);
 }
