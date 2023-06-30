@@ -146,7 +146,7 @@ if (week < weekNBR || weekNBR == 1) {
         localStorage.setItem("Calendrier LFL", json);
         console.log(json);
     });
-
+    console.log("fetch de lol")
     localStorage.setItem('Week Of The Year', weekNBR);
 }
 
