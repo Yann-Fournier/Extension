@@ -127,10 +127,10 @@ var oneJan = new Date(currentdate.getFullYear(),0,1);
 var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
 var weekNBR = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
 // localStorage.setItem('Week Of The Year', 22);
-// console.log(weekNBR);
+console.log("weekNBR : ", weekNBR);
 
 let week = localStorage.getItem('Week Of The Year');
-// console.log(week);
+console.log("week : ", week);
 var lfl, lec, emeaMasters;
 
 var urlLeagues = "https://league-of-legends-esports.p.rapidapi.com/leagues";
@@ -140,6 +140,13 @@ var calendrierLCK = "https://league-of-legends-esports.p.rapidapi.com/schedule?l
 var calendrierEMEAMasters = "https://league-of-legends-esports.p.rapidapi.com/schedule?leagueId=100695891328981122";
 
 if (week < weekNBR || weekNBR == 1) {
+    fetchLOL();
+    console.log("fetch de lol")
+    localStorage.setItem('Week Of The Year', weekNBR);
+}
+
+
+async function logoLOL() {
     console.log("leagues");
     fetch(urlLeagues, {
         headers:head
@@ -152,7 +159,9 @@ if (week < weekNBR || weekNBR == 1) {
         localStorage.setItem("Logo EMEA Master", json.data.leagues[18].image);
         console.log(json);
     });
+}
 
+async function calendrierLFL() {
     console.log("LFL");
     fetch(calendrierLFL, {
         headers:head
@@ -162,7 +171,9 @@ if (week < weekNBR || weekNBR == 1) {
         localStorage.setItem("Calendrier LFL", json);
         console.log(json);
     });
+}
 
+async function calendrierLEC() {
     console.log("LEC");
     fetch(calendrierLEC, {
         headers:head
@@ -172,9 +183,9 @@ if (week < weekNBR || weekNBR == 1) {
         localStorage.setItem("Calendrier LEC", json);
         console.log(json);
     });
+}
 
-    writeNext(0);
-
+async function calendrierLCK() {
     console.log("LCK");
     fetch(calendrierLCK, {
         headers:head
@@ -184,7 +195,9 @@ if (week < weekNBR || weekNBR == 1) {
         localStorage.setItem("Calendrier LCK", json);
         console.log(json);
     });
+}
 
+async function calendrierEMEAMasters() {
     console.log("EMEA Master");
     fetch(calendrierEMEAMasters, {
         headers:head
@@ -194,10 +207,12 @@ if (week < weekNBR || weekNBR == 1) {
         localStorage.setItem("Calendrier EMEA Masters", json);
         console.log(json);
     });
-
-    console.log("fetch de lol")
-    localStorage.setItem('Week Of The Year', weekNBR);
 }
 
-
-
+async function fetchLOL() {
+    await logoLOL();
+    await calendrierLFL();
+    await calendrierLEC();
+    await calendrierLCK();
+    await calendrierEMEAMasters();
+}
